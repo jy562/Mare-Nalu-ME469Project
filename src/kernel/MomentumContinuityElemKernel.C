@@ -143,14 +143,14 @@ MomentumContinuityElemKernel<AlgTraits>::execute(
   SharedMemView<DoubleType *>& rhs,
   ScratchViews<DoubleType>& scratchViews)
 {
-  NALU_ALIGNED DoubleType w_uNm1Ip[AlgTraits::nDim_];
-  NALU_ALIGNED DoubleType w_uNIp[AlgTraits::nDim_];
-  NALU_ALIGNED DoubleType w_uNp1Ip[AlgTraits::nDim_];
-  NALU_ALIGNED DoubleType w_rhoUNp1Ip[AlgTraits::nDim_];
-  NALU_ALIGNED DoubleType w_rhoUNIp[AlgTraits::nDim_];
-  NALU_ALIGNED DoubleType w_dpdxIp[AlgTraits::nDim_];
-  NALU_ALIGNED DoubleType w_GjpIp[AlgTraits::nDim_];
-  NALU_ALIGNED DoubleType w_GjpOldIp[AlgTraits::nDim_];
+  DoubleType w_uNm1Ip[AlgTraits::nDim_];
+  DoubleType w_uNIp[AlgTraits::nDim_];
+  DoubleType w_uNp1Ip[AlgTraits::nDim_];
+  DoubleType w_rhoUNp1Ip[AlgTraits::nDim_];
+  DoubleType w_rhoUNIp[AlgTraits::nDim_];
+  DoubleType w_dpdxIp[AlgTraits::nDim_];
+  DoubleType w_GjpIp[AlgTraits::nDim_];
+  DoubleType w_GjpOldIp[AlgTraits::nDim_];
 
   // add scalings that allow the precise option being run
   const double includePstabInMom = 1.0;
